@@ -1,0 +1,93 @@
+{
+  "context": "https://example.org/mcp/context.jsonld",
+  "type": "CommodityDataCollection",
+  "entities": [
+    {
+      "id": "urn:commodity:USA:NaturalGas:2023-11-14",
+      "type": "CommodityRecord",
+      "location": {
+        "type": "Property",
+        "value": "USA"
+      },
+      "date": {
+        "type": "Property",
+        "value": "2023-11-14"
+      },
+      "commodity": {
+        "type": "Property",
+        "value": "Natural Gas"
+      },
+      "measurementType": {
+        "type": "Property",
+        "value": "Price"
+      },
+      "datasetType": {
+        "type": "Property",
+        "value": "Forecast"
+      },
+      "value": {
+        "type": "Property",
+        "value": 1156.34,
+        "unitCode": "USD"
+      }
+    },
+    {
+      "id": "urn:commodity:India:Wheat:2024-02-28",
+      "type": "CommodityRecord",
+      "location": {
+        "type": "Property",
+        "value": "India"
+      },
+      "date": {
+        "type": "Property",
+        "value": "2024-02-28"
+      },
+      "commodity": {
+        "type": "Property",
+        "value": "Wheat"
+      },
+      "measurementType": {
+        "type": "Property",
+        "value": "Export"
+      },
+      "datasetType": {
+        "type": "Property",
+        "value": "Research"
+      },
+      "value": {
+        "type": "Property",
+        "value": 2634.78,
+        "unitCode": "USD"
+      }
+    },
+    {
+      "id": "urn:commodity:Brazil:Oil:2023-07-09",
+      "type": "CommodityRecord",
+      "location": {
+        "type": "Property",
+        "value": "Brazil"
+      },
+      "date": {
+        "type": "Property",
+        "value": "2023-07-09"
+      },
+      "commodity": {
+        "type": "Property",
+        "value": "Oil"
+      },
+      "measurementType": {
+        "type": "Property",
+        "value": "Consumption"
+      },
+      "datasetType": {
+        "type": "Property",
+        "value": "Official"
+      },
+      "value": {
+        "type": "Property",
+        "value": 3421.11,
+        "unitCode": "USD"
+      }
+    }
+  ]
+}
