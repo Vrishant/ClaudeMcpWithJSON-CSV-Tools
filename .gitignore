@@ -1,1 +1,32 @@
-/node_modules
+# Node dependencies
+node_modules/
+
+# Build output
+build/
+*.js
+
+# Compiled TypeScript
+*.js.map
+*.tsbuildinfo
+
+# Asset files
+assets/commodities.json
+
+# Environment/OS specific
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Ignore compiled output from src and public if generated
+src/**/*.js
+public/**/*.js
+
+# Optional: Uncomment if using dist or similar output folders
+# dist/
+
+# Ignore lock files if you're not locking dependencies in VCS
+# package-lock.json

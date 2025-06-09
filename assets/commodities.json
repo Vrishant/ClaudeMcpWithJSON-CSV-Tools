@@ -1,93 +1,142 @@
-{
-  "context": "https://example.org/mcp/context.jsonld",
-  "type": "CommodityDataCollection",
-  "entities": [
-    {
-      "id": "urn:commodity:USA:NaturalGas:2023-11-14",
-      "type": "CommodityRecord",
-      "location": {
-        "type": "Property",
-        "value": "USA"
-      },
-      "date": {
-        "type": "Property",
-        "value": "2023-11-14"
-      },
-      "commodity": {
-        "type": "Property",
-        "value": "Natural Gas"
-      },
-      "measurementType": {
-        "type": "Property",
-        "value": "Price"
-      },
-      "datasetType": {
-        "type": "Property",
-        "value": "Forecast"
-      },
-      "value": {
-        "type": "Property",
-        "value": 1156.34,
-        "unitCode": "USD"
-      }
-    },
-    {
-      "id": "urn:commodity:India:Wheat:2024-02-28",
-      "type": "CommodityRecord",
-      "location": {
-        "type": "Property",
-        "value": "India"
-      },
-      "date": {
-        "type": "Property",
-        "value": "2024-02-28"
-      },
-      "commodity": {
-        "type": "Property",
-        "value": "Wheat"
-      },
-      "measurementType": {
-        "type": "Property",
-        "value": "Export"
-      },
-      "datasetType": {
-        "type": "Property",
-        "value": "Research"
-      },
-      "value": {
-        "type": "Property",
-        "value": 2634.78,
-        "unitCode": "USD"
-      }
-    },
-    {
-      "id": "urn:commodity:Brazil:Oil:2023-07-09",
-      "type": "CommodityRecord",
-      "location": {
-        "type": "Property",
-        "value": "Brazil"
-      },
-      "date": {
-        "type": "Property",
-        "value": "2023-07-09"
-      },
-      "commodity": {
-        "type": "Property",
-        "value": "Oil"
-      },
-      "measurementType": {
-        "type": "Property",
-        "value": "Consumption"
-      },
-      "datasetType": {
-        "type": "Property",
-        "value": "Official"
-      },
-      "value": {
-        "type": "Property",
-        "value": 3421.11,
-        "unitCode": "USD"
-      }
-    }
-  ]
-}
+[
+  {
+    "id": "urn:commodity:USA:NaturalGas:2023-11-14",
+    "country": "USA",
+    "commodity": "Natural Gas",
+    "value": 1156.34,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:India:Wheat:2024-02-28",
+    "country": "India",
+    "commodity": "Wheat",
+    "value": 2634.78,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Brazil:Oil:2023-07-09",
+    "country": "Brazil",
+    "commodity": "Oil",
+    "value": 3421.11,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Canada:Soybeans:2025-05-20",
+    "country": "Canada",
+    "commodity": "Soybeans",
+    "value": 1890.55,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Russia:Coal:2024-08-18",
+    "country": "Russia",
+    "commodity": "Coal",
+    "value": 980.45,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:China:IronOre:2024-12-01",
+    "country": "China",
+    "commodity": "Iron Ore",
+    "value": 2156.89,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Australia:Gold:2025-01-22",
+    "country": "Australia",
+    "commodity": "Gold",
+    "value": 5280.60,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:SouthAfrica:Platinum:2024-09-30",
+    "country": "South Africa",
+    "commodity": "Platinum",
+    "value": 3980.44,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Argentina:Corn:2025-03-15",
+    "country": "Argentina",
+    "commodity": "Corn",
+    "value": 1345.72,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Mexico:Silver:2024-06-12",
+    "country": "Mexico",
+    "commodity": "Silver",
+    "value": 1720.35,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Norway:NaturalGas:2023-10-19",
+    "country": "Norway",
+    "commodity": "Natural Gas",
+    "value": 1445.90,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Ukraine:Wheat:2025-04-02",
+    "country": "Ukraine",
+    "commodity": "Wheat",
+    "value": 2489.65,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:SaudiArabia:Oil:2024-11-11",
+    "country": "Saudi Arabia",
+    "commodity": "Oil",
+    "value": 4123.50,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Germany:Coal:2023-08-23",
+    "country": "Germany",
+    "commodity": "Coal",
+    "value": 1056.77,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Vietnam:Coffee:2024-10-10",
+    "country": "Vietnam",
+    "commodity": "Coffee",
+    "value": 1544.22,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Indonesia:PalmOil:2024-07-07",
+    "country": "Indonesia",
+    "commodity": "Palm Oil",
+    "value": 1623.10,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Egypt:Cotton:2025-02-25",
+    "country": "Egypt",
+    "commodity": "Cotton",
+    "value": 1260.50,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Nigeria:Oil:2023-09-13",
+    "country": "Nigeria",
+    "commodity": "Oil",
+    "value": 3310.20,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:France:Wine:2024-03-18",
+    "country": "France",
+    "commodity": "Wine",
+    "value": 2840.88,
+    "unit": "USD"
+  },
+  {
+    "id": "urn:commodity:Thailand:Rubber:2025-06-01",
+    "country": "Thailand",
+    "commodity": "Rubber",
+    "value": 990.99,
+    "unit": "USD"
+  }
+]

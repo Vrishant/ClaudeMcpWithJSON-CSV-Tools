@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather MCP Server</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      max-width: 600px;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather MCP Server</h1>
+
+  <section>
+    <h2>Get Weather Alerts</h2>
+    <label for="state">State Code (e.g. CA, NY):</label>
+    <input type="text" id="state" maxlength="2" />
+    <button id="alertsBtn">Get Alerts</button>
+    <pre id="alertsResult"></pre>
+  </section>
+
+  <section>
+    <h2>Get Weather Forecast</h2>
+    <label for="latitude">Latitude:</label>
+    <input type="number" id="latitude" step="0.0001" />
+    <label for="longitude">Longitude:</label>
+    <input type="number" id="longitude" step="0.0001" />
+    <button id="forecastBtn">Get Forecast</button>
+    <pre id="forecastResult"></pre>
+  </section>
+
+  <script>
+    document.getElementById('alertsBtn').addEventListener('click', async () => {
+      const state = document.getElementById('state').value.trim().toUpperCase();
+      if (state.length !== 2) {
+        alert('Please enter a valid 2-letter state code.');
+        return;
+      }
+      const resultElem = document.getElementById('alertsResult');
+      resultElem.textContent = 'Loading...';
+      try {
+        const response = await fetch(`/api/alerts?state=${state}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch alerts');
+        }
+        const text = await response.text();
+        resultElem.textContent = text;
+      } catch (err) {
+        resultElem.textContent = 'Error: ' + err.message;
+      }
+    });
+
+    document.getElementById('forecastBtn').addEventListener('click', async () => {
+      const lat = parseFloat(document.getElementById('latitude').value);
+      const lon = parseFloat(document.getElementById('longitude').value);
+      if (isNaN(lat) || lat < -90 || lat > 90) {
+        alert('Please enter a valid latitude between -90 and 90.');
+        return;
+      }
+      if (isNaN(lon) || lon < -180 || lon > 180) {
+        alert('Please enter a valid longitude between -180 and 180.');
+        return;
+      }
+      const resultElem = document.getElementById('forecastResult');
+      resultElem.textContent = 'Loading...';
+      try {
+        const response = await fetch(`/api/forecast?latitude=${lat}&longitude=${lon}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch forecast');
+        }
+        const text = await response.text();
+        resultElem.textContent = text;
+      } catch (err) {
+        resultElem.textContent = 'Error: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
